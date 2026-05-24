@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Input Section -->
+  <div class="input">
+      <h1>TaskZen</h1>
+      <p class="subtitle">stay organized..stay focused.</p>
+
+      <input 
+        type="text" 
+        id="taskInput" 
+        placeholder="Enter a new task..." 
+        autocomplete="off"
+      >
+
+      <div class="timer-input-group">
+          <label for="dueDate">Due Date:</label>
+
+          <input type="datetime-local" id="dueDate">
+      </div>
+
+      <button id="createTaskBtn">Add Task</button>
+  </div>
+
+  <!-- Filter Buttons -->
+  <div class="filter-container">
+      <button class="filter-btn" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="completed">Completed</button>
+      <button class="filter-btn" data-filter="overdue">Overdue</button>
+  </div>
+
+  <!-- Delete Completed -->
+  <div class="delete-completed-container">
+      <button id="deleteCompletedBtn">
+        Delete All Completed Tasks
+      </button>
+  </div>
+
+  <!-- Tasks Container -->
+  <div class="showtasks" id="tasksContainer"></div>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+
+</body>
+</html>
